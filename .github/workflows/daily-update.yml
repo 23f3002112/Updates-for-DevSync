@@ -1,10 +1,12 @@
 name: Daily Repository Update
 
+permissions:
+  contents: write
+
 on:
   schedule:
-    # Runs once per day at 05:30 UTC (change if you want, but NO wildcards)
     - cron: '30 5 * * *'
-  workflow_dispatch:   # allows manual trigger
+  workflow_dispatch:
 
 jobs:
   update:
